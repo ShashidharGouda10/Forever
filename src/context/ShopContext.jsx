@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 export const ShopContext= createContext();
 
 const ShopContextProvider=(props)=>{ 
-    const currency='$';
-    const delivery_fee=10;
+    const currency='₹';
+    const delivery_fee=40;
     const [search, setSearch] = useState('');
     const [showSearch,setShowSearch]= useState(false);
     const [cartItems, setCartItems] = useState({})
@@ -23,7 +23,7 @@ const ShopContextProvider=(props)=>{
 
         if(cartData[itemId]){
             if(cartData[itemId][size]){
-                cartData[itemId][size] +=1;
+                cartData[itemId][size] +=1;  
             }
             else{
                 cartData[itemId][size] =1;
